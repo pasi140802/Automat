@@ -1,0 +1,82 @@
+/* Grundlegendes Styling für den Body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Styling für den Container */
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling für den Bereich der Slot-Maschine */
+#slotMachine {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* Styling für jede einzelne Walze */
+.reel {
+    font-size: 48px;
+    width: 60px;
+    height: 240px; /* Höhe der Walze angepasst */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Wrapper für die Symbole innerhalb der Walze */
+.reel div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Keyframes für die Animation */
+@keyframes spin {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); } /* Annahme: es gibt 6 Symbole, die 10-fach wiederholt werden */
+}
+
+/* Styling für den Dreh-Button */
+#spinButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+#spinButton:hover {
+    background-color: #0056b3;
+}
+
+/* Styling für den Ergebnisbereich */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Styling für den Punktestand */
+#score {
+    margin-top: 10px;
+    font-size: 18px;
+}
